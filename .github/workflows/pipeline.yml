@@ -1,0 +1,36 @@
+name: Predictive Maintenance Pipeline
+
+on:
+push:
+branches:
+- main
+
+jobs:
+build:
+runs-on: ubuntu-latest
+
+```
+steps:
+
+- name: Checkout Repository
+  uses: actions/checkout@v3
+
+- name: Setup Python
+  uses: actions/setup-python@v4
+  with:
+    python-version: '3.10'
+
+- name: Install Dependencies
+  run: |
+    pip install pandas
+    pip install numpy
+    pip install scikit-learn
+    pip install streamlit
+    pip install huggingface_hub
+    pip install joblib
+
+- name: Verify Project Structure
+  run: |
+    echo "Pipeline executed successfully"
+    ls
+```
