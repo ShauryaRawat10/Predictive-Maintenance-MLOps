@@ -1,6 +1,6 @@
 name: Predictive Maintenance Pipeline
 
-on:
+"on":
 push:
 branches:
 - main
